@@ -14,16 +14,22 @@ $password = $_POST['pwd'];
 $password2 = $_POST['cpwd'];
 $name = $_POST['name'];
 
-if ($password === $password2) {
+if ($password === $password2)
+{
     $query = "INSERT INTO $mysql_table_users (email, password, name) VALUES ('$email', '$password', '$name')";
     $res = mysql_query($query);
-    if ($res) {
+    if ($res)
+    {
         echo 'User Registered. ';
-        // http_get('login.php');
-    } else {
+        // include 'profile.php'; // TODO
+    }
+    else
+    {
         echo 'MySQL error. ';
     }
-} else {
+}
+else
+{
     echo 'Please ensure that both password fields match. ';
     include 'index.html';
 }

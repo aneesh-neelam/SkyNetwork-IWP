@@ -12,14 +12,31 @@ mysql_select_db($mysql_db);
 $email = $_POST['email'];
 $password = $_POST['pwd'];
 
-$query = "SELECT FROM $mysql_table_users (email, password, name) VALUES ('$email', '$password')";
+$query = "SELECT * FROM $mysql_table_users WHERE email='$email' AND password='$password'";
 $res = mysql_query($query);
-echo $res;
-if ($res) {
-    echo 'User Registered. ';
-    // http_get('login.php');
-} else {
-    echo 'Registration Error. ';
+$count = mysql_num_rows($res);
+if ($count > 0)
+{
+    echo "<table border='1'>
+        <tr>
+        <th>Name</th>
+        <th>Email</th>
+        </tr>";
+
+    while ($row = mysql_fetch_array($res, MYSQL_ASSOC))
+    {
+        echo "<tr>";
+        echo "<td>" . $row['name'] . "</td>";
+        echo "<td>" . $row['email'] . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+    // include 'profile.php'; // TODO
+}
+else
+{
+    echo 'No such user, please register. ';
+    include 'index.html';
 }
 
 mysql_close($con);
