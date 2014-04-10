@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-    <!--
-        Created by PhpStorm.
+<!--
+    Created by PhpStorm.
         User: Aneesh Neelam <neelam.aneesh@gmail.com>
         Date: 10/4/14
         Time: 5:42 PM
-    -->
-    <html>
-        <head>
-            <title>Sky Network</title>
+-->
+<html>
+<head>
+    <title>Sky Network</title>
             <link rel="stylesheet" type="text/css" href="index.css">
-            <script type="text/javascript" src="index.js"></script>
-        </head>
-        <body>
+    <script type="javascript" src="index.js"></script>
+</head>
+<body>
             <h1>Welcome to SkyNetwork</h1>
             <div>
                 <h4>New User? Please register here. </h4>
@@ -19,11 +19,12 @@
                 <form action="register.php" method="post">
                     <label> Email: </label> <input type="email" name="email" placeholder="Email"> <br>
                     <label> Name: </label> <input type="text" name="name" placeholder="Full Name"> <br>
-                    <label> Password: </label> <input type="password" name="pwd" placeholder="Password"
-                                                      oninput="validatepwd()"> <br>
-                    <label> Confirm Password: </label> <input type="password" name="cpwd" placeholder="Retype Password"
-                                                              oninput="validatepwd()"> <br>
-                    <label id="pwdmsg"> Both password fields must match. </label> <br>
+                    <label> Password: </label> <input type="password" id="pwd" name="pwd" placeholder="Password"
+                                                      onchange="validatepwd()"> <br>
+                    <label> Confirm Password: </label> <input type="password" id="cpwd" name="cpwd"
+                                                              placeholder="Retype Password"
+                                                              onchange="validatepwd()"> <br>
+                    <label id="pwdmsg">Both password fields must match. </label> <br>
                     <input type="submit">
                 </form>
             </div>
@@ -33,7 +34,7 @@
 
                 <form action="login.php" method="post">
                     <label> Email: </label> <input type="email" placeholder="Email" name="email"> <br>
-                    <label> Password: </label> <input type="password" placeholder="Password" name="pwd"> <br>
+                    <label> Password: </label> <input type="password" placeholder="Password" name="pwd"> <br> <br>
                     <input type="submit">
                 </form>
             </div>

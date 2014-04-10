@@ -3,11 +3,11 @@
  */
 
 function validatepwd() {
-    var pwd = document.getElementById("pwd").value;
-    var cpwd = document.getElementById("cpwd").value;
-    var pwdmsg = document.getElementById('pwdmsg');
-    if (pwd === cpwd) {
-
+    alert("Hello");
+    var pwd = document.getElementById("pwd");
+    var cpwd = document.getElementById("cpwd");
+    var pwdmsg = document.getElementById("pwdmsg");
+    if (pwd.value === cpwd.value) {
         pwdmsg.style.visibility = "collapse";
     }
     else {
