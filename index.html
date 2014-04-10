@@ -8,26 +8,33 @@
     <html>
         <head>
             <title>Sky Network</title>
+            <link rel="stylesheet" type="text/css" href="index.css">
+            <script type="text/javascript" src="index.js"></script>
         </head>
         <body>
             <h1>Welcome to SkyNetwork</h1>
             <div>
                 <h4>New User? Please register here. </h4>
-                <form action="skynetwork.php4" method="post">
-                    <label> Email: </label> <input type="email" name="email"> <br>
-                    <label> Password: </label> <input type="password" name="pwd"> <br>
-                    <label> Confirm Password: </label> <input type="password" name="cpwd"> <br>
-                    <label> Full Name: </label> <input type="text" name="name"> <br>
-                    <label> Date of Birth: </label> <input type="date" name="dob"> <br>
+
+                <form action="register.php" method="post">
+                    <label> Email: </label> <input type="email" name="email" placeholder="Email"> <br>
+                    <label> Name: </label> <input type="text" name="name" placeholder="Full Name"> <br>
+                    <label> Password: </label> <input type="password" name="pwd" placeholder="Password"
+                                                      oninput="validatepwd()"> <br>
+                    <label> Confirm Password: </label> <input type="password" name="cpwd" placeholder="Retype Password"
+                                                              oninput="validatepwd()"> <br>
+
+                    <div id="pwdmsg"><label> Both password fields must match. </label></div>
                     <input type="submit">
                 </form>
             </div>
             <hr>
             <div>
                 <h4>Already registered? Please login here. </h4>
-                <form action="skynetwork.php4" method="post">
-                    <label> Email: </label> <input type="email" name="email"> <br>
-                    <label> Password: </label> <input type="password" name="pwd"> <br>
+
+                <form action="login.php" method="post">
+                    <label> Email: </label> <input type="email" placeholder="Email" name="email"> <br>
+                    <label> Password: </label> <input type="password" placeholder="Password" name="pwd"> <br>
                     <input type="submit">
                 </form>
             </div>
