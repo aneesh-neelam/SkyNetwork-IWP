@@ -4,7 +4,6 @@
 
 function validatepwd()
 {
-    alert("Hello");
     var pwd = document.getElementById("pwd");
     var cpwd = document.getElementById("cpwd");
     var pwdmsg = document.getElementById("pwdmsg");

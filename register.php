@@ -5,6 +5,7 @@
  * Date: 10/4/14
  * Time: 6:17 PM
  */
+session_start();
 include 'settings.php';
 $con = mysql_connect($mysql_host, $mysql_username, $mysql_password);
 mysql_select_db($mysql_db);
@@ -20,6 +21,8 @@ if ($password === $password2)
     $res = mysql_query($query);
     if ($res)
     {
+        $_SESSION['email'] = $email;
+        setcookie("email", $_SESSION['email'], time() + 2 * 60);
         echo 'User Registered. ';
         // include 'profile.php'; // TODO
     }
@@ -31,7 +34,7 @@ if ($password === $password2)
 else
 {
     echo 'Please ensure that both password fields match. ';
-    include 'index.html';
+    include 'new.html';
 }
 
 mysql_close($con);

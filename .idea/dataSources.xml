@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4172699457">
+    <data-source source="LOCAL" name="MySQL - skynetwork@localhost" uuid="d23e9baf-2621-490f-83af-e3a59d8458e8">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/skynetwork</jdbc-url>
+      <user-name>skynet</user-name>
+      <user-password>df9bdf9bdf98df99df9fdf92</user-password>
+      <schema-pattern>skynetwork.*</schema-pattern>
+      <default-schemas>skynetwork.*</default-schemas>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
